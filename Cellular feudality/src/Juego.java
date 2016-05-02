@@ -1,73 +1,96 @@
-import org.eclipse.swt.*;
-import org.eclipse.swt.awt.SWT_AWT;
-import org.eclipse.swt.events.*;
-import org.eclipse.swt.layout.*;
-import org.eclipse.swt.widgets.*;
+import org.lwjgl.*;
+import org.lwjgl.glfw.*;
+import org.lwjgl.opengl.*;
 
-import javax.media.opengl.*;
-import javax.media.opengl.glu.*;
-import java.awt.*;
-
-import static javafx.application.ConditionalFeature.SWT;
+import static org.lwjgl.glfw.Callbacks.*;
+import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.system.MemoryUtil.*;
 
 
 /**
  * Created by kenner on 02/05/2016.
  */
-public class Juego implements GLEventListener{
+public class Juego {
 
-    void runMain(Display display)
-    {
-        final Shell shell = new Shell(display);
-        shell.setText("Q*bert 3D - OpenGL Exercise");
-        GridLayout gridLayout = new GridLayout();
-        gridLayout.marginHeight = 0;
-        gridLayout.marginWidth = 0;
+    private long window;
 
-        shell.setLayout(gridLayout);
+    public void ejecutarJuego(){
+        System.out.println("Hello LWJGL " + Version.getVersion() + "!");
 
-        // this allows us to set particular properties for the GLCanvas
-        GLCapabilities glCapabilities = new GLCapabilities();
 
-        glCapabilities.setDoubleBuffered(true);
-        glCapabilities.setHardwareAccelerated(true);
+            iniciarJuego();
+            loop();
 
-        // instantiate the canvas
-        final GLCanvas canvas = new GLCanvas(glCapabilities);
+            // Free the window callbacks and destroy the window
+            glfwFreeCallbacks(window);
+            glfwDestroyWindow(window);
 
-        // we can't use the default Composite because using the AWT bridge
-        // requires that it have the property of SWT.EMBEDDED
-        Composite composite = new Composite(shell, SWT.EMBEDDED);
-        GridData ld = new GridData(GridData.FILL_BOTH);
-        composite.setLayoutData(ld);
+    }
 
-        // set the internal layout so our canvas fills the whole control
-        FillLayout clayout = new FillLayout();
-        composite.setLayout(clayout);
+    public void iniciarJuego(){
+        GLFWErrorCallback.createPrint(System.err).set();
 
-        // create the special frame bridge to AWT
-        java.awt.Frame glFrame = SWT_AWT.new_Frame(composite);
-        // we need the listener so we get the GL events
-        canvas.addGLEventListener(this);
+        if(!glfwInit()){
+            throw new IllegalStateException("No es posible iniciar GLFW");
+        }
 
-        // finally, add our canvas as a child of the frame
-        glFrame.add(canvas);
+        glfwDefaultWindowHints();
+        glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
+        glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 
-        // show it all
-        shell.open();
-        // the event loop.
-        while (!shell.isDisposed ()) {
-            if (!display.readAndDispatch ()) display.sleep ();
+        int ANCHO = 300;
+        int ALTO  = 300;
+
+        window = glfwCreateWindow(ANCHO, ALTO, "Cellular Feudality", NULL, NULL);
+
+        if(window == NULL){
+            throw new RuntimeException("No se ha podido crear la ventana");
+        }
+
+        glfwSetKeyCallback(window, (window, key, scancode, action, mods) -> {
+            if(key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE){
+                glfwSetWindowShouldClose(window, true);
+            }
+        });
+
+        GLFWVidMode vidMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+
+        glfwSetWindowPos(window, (vidMode.width() - ANCHO) / 2, (vidMode.height() - ALTO) / 2);
+
+        glfwMakeContextCurrent(window);
+
+        glfwSwapInterval(1);
+
+        glfwShowWindow(window);
+
+
+
+    }
+    private void loop() {
+        // This line is critical for LWJGL's interoperation with GLFW's
+        // OpenGL context, or any context that is managed externally.
+        // LWJGL detects the context that is current in the current thread,
+        // creates the GLCapabilities instance and makes the OpenGL
+        // bindings available for use.
+        GL.createCapabilities();
+
+        // Set the clear color
+        glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
+
+        // Run the rendering loop until the user has attempted to close
+        // the window or has pressed the ESCAPE key.
+        while ( !glfwWindowShouldClose(window) ) {
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
+
+            glfwSwapBuffers(window); // swap the color buffers
+
+            // Poll for window events. The key callback above will only be
+            // invoked during this call.
+            glfwPollEvents();
         }
     }
-    Ellipse2D circulo;
-
-    public void paint(Graphics2D g){
-        Graphics2D g2d = (Graphics2D) g;
-
-        circulo.setFrameFromCenter(20f,50f, 50f, 80f);
-
-        g2d.draw(circulo);
+    public void render(){
+        glClear(GL_COLOR_BUFFER_BIT);
     }
-
 }

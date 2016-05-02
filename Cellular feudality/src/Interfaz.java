@@ -187,9 +187,7 @@ public class Interfaz extends JFrame implements ActionListener{
             if(ip.length() > 6){
                 try {
                     Juego juego = new Juego();
-
-                    cambiarPanel(juego);
-                    juego.paint(getGraphics());
+                    juego.ejecutarJuego();
 
                     Cliente cliente = new Cliente();
                     cliente.startClient();
