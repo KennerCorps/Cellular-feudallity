@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="cellular_feudality" default="all">
+  
+  
+  <property file="cellular_feudality.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.ear"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.lwjgl.classpath">
+    <pathelement location="${basedir}/libraries/lwjgl.jar"/>
+  </path>
+  
+  <path id="library.lwjgl_util.classpath">
+    <pathelement location="${basedir}/libraries/lwjgl_util.jar"/>
+  </path>
+  
+  <path id="library.native.classpath"/>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module Cellular feudality -->
+  
+  <dirname property="module.cellular_feudality.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.cellular_feudality" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.cellular_feudality" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.cellular_feudality" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.cellular_feudality" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="cellular_feudality.output.dir" value="${module.cellular_feudality.basedir}/out/production/Cellular feudality"/>
+  <property name="cellular_feudality.testoutput.dir" value="${module.cellular_feudality.basedir}/out/test/Cellular feudality"/>
+  
+  <path id="cellular_feudality.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="cellular_feudality.module.production.classpath">
+    <path refid="${module.jdk.classpath.cellular_feudality}"/>
+    <path refid="library.lwjgl.classpath"/>
+    <path refid="library.lwjgl_util.classpath"/>
+    <path refid="library.native.classpath"/>
+  </path>
+  
+  <path id="cellular_feudality.runtime.production.module.classpath">
+    <pathelement location="${cellular_feudality.output.dir}"/>
+    <path refid="library.lwjgl.classpath"/>
+    <path refid="library.lwjgl_util.classpath"/>
+    <path refid="library.native.classpath"/>
+  </path>
+  
+  <path id="cellular_feudality.module.classpath">
+    <path refid="${module.jdk.classpath.cellular_feudality}"/>
+    <pathelement location="${cellular_feudality.output.dir}"/>
+    <path refid="library.lwjgl.classpath"/>
+    <path refid="library.lwjgl_util.classpath"/>
+    <path refid="library.native.classpath"/>
+  </path>
+  
+  <path id="cellular_feudality.runtime.module.classpath">
+    <pathelement location="${cellular_feudality.testoutput.dir}"/>
+    <pathelement location="${cellular_feudality.output.dir}"/>
+    <path refid="library.lwjgl.classpath"/>
+    <path refid="library.lwjgl_util.classpath"/>
+    <path refid="library.native.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.cellular_feudality">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.cellular_feudality">
+    <patternset refid="excluded.from.module.cellular_feudality"/>
+  </patternset>
+  
+  <path id="cellular_feudality.module.sourcepath">
+    <dirset dir="${module.cellular_feudality.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.cellular_feudality" depends="compile.module.cellular_feudality.production,compile.module.cellular_feudality.tests" description="Compile module Cellular feudality"/>
+  
+  <target name="compile.module.cellular_feudality.production" depends="register.custom.compilers" description="Compile module Cellular feudality; production classes">
+    <mkdir dir="${cellular_feudality.output.dir}"/>
+    <javac2 destdir="${cellular_feudality.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.cellular_feudality}/javac">
+      <compilerarg line="${compiler.args.cellular_feudality}"/>
+      <bootclasspath refid="cellular_feudality.module.bootclasspath"/>
+      <classpath refid="cellular_feudality.module.production.classpath"/>
+      <src refid="cellular_feudality.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.cellular_feudality"/>
+    </javac2>
+    
+    <copy todir="${cellular_feudality.output.dir}">
+      <fileset dir="${module.cellular_feudality.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.cellular_feudality.tests" depends="register.custom.compilers,compile.module.cellular_feudality.production" description="compile module Cellular feudality; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.cellular_feudality" description="cleanup module">
+    <delete dir="${cellular_feudality.output.dir}"/>
+    <delete dir="${cellular_feudality.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.cellular_feudality" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.cellular_feudality" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.cellular" value="${basedir}/out/artifacts/cellular"/>
+    <property name="artifact.output.cellular_feudality" value="${basedir}/out/artifacts/Cellular_Feudality"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.cellular.jar" value="${artifacts.temp.dir}/cellular.jar"/>
+    <property name="temp.jar.path.Cellular Feudality.jar" value="${artifacts.temp.dir}/Cellular Feudality.jar"/>
+  </target>
+  
+  <target name="artifact.cellular" depends="init.artifacts, compile.module.cellular_feudality" description="Build &#39;cellular&#39; artifact">
+    <property name="artifact.temp.output.cellular" value="${artifacts.temp.dir}/cellular"/>
+    <mkdir dir="${artifact.temp.output.cellular}"/>
+    <jar destfile="${temp.jar.path.cellular.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset file="${basedir}/out/artifacts/Cellular_Feudality/cellular/META-INF/MANIFEST.MF" prefix="META-INF"/>
+      <zipfileset dir="${cellular_feudality.output.dir}"/>
+    </jar>
+    <copy file="${temp.jar.path.cellular.jar}" tofile="${artifact.temp.output.cellular}/cellular.jar"/>
+  </target>
+  
+  <target name="artifact.cellular_feudality" depends="init.artifacts, compile.module.cellular_feudality" description="Build &#39;Cellular Feudality&#39; artifact">
+    <property name="artifact.temp.output.cellular_feudality" value="${artifacts.temp.dir}/Cellular_Feudality"/>
+    <mkdir dir="${artifact.temp.output.cellular_feudality}"/>
+    <jar destfile="${temp.jar.path.Cellular Feudality.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset file="${basedir}/META-INF/MANIFEST.MF" prefix="META-INF"/>
+      <zipfileset dir="${cellular_feudality.output.dir}"/>
+    </jar>
+    <copy file="${temp.jar.path.Cellular Feudality.jar}" tofile="${artifact.temp.output.cellular_feudality}/Cellular Feudality.jar"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.cellular, artifact.cellular_feudality" description="Build all artifacts">
+    <mkdir dir="${artifact.output.cellular}"/>
+    <copy todir="${artifact.output.cellular}">
+      <fileset dir="${artifact.temp.output.cellular}"/>
+    </copy>
+    <mkdir dir="${artifact.output.cellular_feudality}"/>
+    <copy todir="${artifact.output.cellular_feudality}">
+      <fileset dir="${artifact.temp.output.cellular_feudality}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>
