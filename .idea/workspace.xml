@@ -6,7 +6,34 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ceed633-823a-4e8a-b688-a428abc5aabc" name="Default" comment="" />
+    <list default="true" id="4ceed633-823a-4e8a-b688-a428abc5aabc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/linux/libjinput-linux.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/linux/libjinput-linux64.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/linux/liblwjgl.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/linux/liblwjgl64.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/linux/libopenal.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/linux/libopenal64.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/macosx/libjinput-osx.dylib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/macosx/liblwjgl.dylib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/macosx/openal.dylib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/solaris/liblwjgl.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/solaris/liblwjgl64.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/solaris/libopenal.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/solaris/libopenal64.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/windows/OpenAL32.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/windows/OpenAL64.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/windows/jinput-dx8.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/windows/jinput-dx8_64.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/windows/jinput-raw.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/windows/jinput-raw_64.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/windows/lwjgl.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/native/windows/lwjgl64.dll" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Cellular_Feudality/Cellular Feudality.jar" afterPath="$PROJECT_DIR$/out/artifacts/Cellular_Feudality/Cellular Feudality.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/cellular/cellular.jar" afterPath="$PROJECT_DIR$/out/artifacts/cellular/cellular.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cellular feudality.iml" afterPath="$PROJECT_DIR$/Cellular feudality.iml" />
+    </list>
     <ignored path="Agario.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -64,40 +91,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Celula.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Juego/Celula.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#225#226#0" expanded="true" />
-                <element signature="e#254#255#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#418#419#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Interfaz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interfaz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3094">
+            <state relative-caret-position="252">
               <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jugador.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Juego/Jugador.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -112,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VentanaJuego.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VentanaJuego.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Juego/VentanaJuego.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="214">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,15 +125,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Juego.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Juego.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Juego/Juego.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding>
-                <element signature="e#462#463#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,6 +159,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -222,9 +223,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
       <pane id="Scope">
         <subPane subId="Production">
           <PATH>
@@ -256,19 +254,8 @@
         </subPane>
         <subPane subId="Tests" />
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Agario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+      <pane id="Scratches">
+        <subPane />
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -322,13 +309,27 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Agario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Agario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21954022" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/native" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -634,11 +635,11 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53276956" sideWeight="0.51666665" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29069766" sideWeight="0.48333332" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29069766" sideWeight="0.48333332" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23645833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23645833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24926686" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -673,16 +674,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Interfaz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -964,16 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interfaz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3094">
-          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Conexion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1002,6 +983,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Juego/Render.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Juego/Juego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Juego/Mundo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1016,34 +1016,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Juego/Render.java">
+    <entry file="jar://D:/INSTALL/JDK/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3689">
+          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Juego/VentanaJuego.java">
+    <entry file="file://$PROJECT_DIR$/src/Interfaz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Juego/Juego.java">
+    <entry file="file://$PROJECT_DIR$/src/Juego/VentanaJuego.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="214">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
